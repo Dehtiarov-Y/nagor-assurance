@@ -819,7 +819,6 @@ p {
     /* Обновляем цвета */
     --cna-orange: #FF6B00;
     --cna-noir-texte: #333333;
-    --cna-titre-couleur: #2c3e50; /* Новый, более глубокий цвет для заголовков */
     --cna-gris-clair: #f9f9f9;  /* Еще более светлый фон для секций */
     --cna-blanc: #FFFFFF;
     --cna-gris-bordure: #DDDDDD;
@@ -1050,11 +1049,3 @@ h1, h2, h3, h4, h5, h6, .main-header nav ul li a {
         height: 60px; /* Возвращаем как было */
     }
 }
-
-
-
-
-
-
-
-
