@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - C.N.A Assurances</title>
+    <link rel="icon" type="image/jpeg" href="img/logo-cna.jpg" />
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/logo-cna.jpg" alt="Logo C.N.A Christian Nagor Assurances">
+                </a>
+            </div>
+
+            <div class="nav-wrapper">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="solutions.html">Nos Solutions</a></li>
+                        <li><a href="apropos.html">Qui sommes-nous ?</a></li>
+                        <li><a href="partenaires.html">Nos Partenaires</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="cta-button">
+                    <a href="contact.html" class="btn">Obtenir un Devis</a>
+                </div>
+            </div>
+
+            <button class="hamburger" id="hamburger-button">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="section">
+            <div class="container">
+                <h1 class="section-title">Contactez-nous</h1>
+                <p class="text-center" style="max-width: 800px; margin: 0 auto 40px auto;">
+                    Une question ? Un projet ? Besoin d'un devis ? Remplissez ce formulaire ou contactez-nous directement. Nous vous répondrons dans les meilleurs délais.
+                </p>
+                
+                <div class="contact-layout">
+                    <div class="contact-form">
+                        <h3>Envoyer un message</h3>
+                        <form id="main-contact-form" action="#" method="POST">
+                            <div class="form-group">
+                                <label for="name">Nom</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Téléphone</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Sujet</label>
+                                <input type="text" id="subject" name="subject" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Votre Message</label>
+                                <textarea id="message" name="message" rows="6" required></textarea>
+                            </div>
+                            <button type="submit" class="btn">Envoyer le Message</button>
+                        </form>
+                    </div>
+                    
+                    <div class="contact-info">
+                        <h3>Nos Coordonnées</h3>
+                        <div class="info-block">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Bureau</strong>
+                                <p>4 RUE KLOBB<br>68150 RIBEAUVILLE</p>
+                            </div>
+                        </div>
+                        <div class="info-block">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <strong>Téléphones</strong>
+                                <p>Agence : 03.68.07.16.06</p>
+                                <p>Portable : 06.86.56.47.96</p>
+                            </div>
+                        </div>
+                        <div class="info-block">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email</strong>
+                                <p><a href="mailto:info@nagorassurances.fr">info@nagorassurances.fr</a></p>
+                            </div>
+                        </div>
+                        <div class="info-block">
+                            <i class="fas fa-globe"></i>
+                            <div>
+                                <strong>Site Web</strong>
+                                <p><a href="http://www.cna68.com" target="_blank">www.cna68.com</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-map">
+                            <h3>Où nous trouver ?</h3>
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2661.121544265814!2d7.324831815617088!3d48.19632197922757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479165c345b59695%3A0x8e02d0b58e3f94c4!2s4%20Rue%20Klobb%2C%2068150%20Ribeauvill%C3%A9%2C%20France!5e0!3m2!1sfr!2sus!4v1667815151512!5m2!1sfr!2sus" 
+                                width="100%" 
+                                height="300" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-logo">
+                <a href="index.html">
+                    <img src="img/logo-cna.jpg" alt="Logo C.N.A Blanc">
+                </a>
+            </div>
+            <div class="footer-contact">
+                <p><strong>C.N.A Assurances</strong></p>
+                <p>4 RUE KLOBB, 68150 RIBEAUVILLE</p>
+                <p>Tél Agence : 03.68.07.16.06 | Portable : 06.86.56.47.96</p>
+                <p>Email : <a href="mailto:info@nagorassurances.fr">info@nagorassurances.fr</a></p>
+            </div>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="solutions.html">Nos Solutions</a></li>
+                    <li><a href="apropos.html">Qui sommes-nous ?</a></li>
+                    <li><a href="mentions-legales.html">Mentions Légales</a></li>
+                </ul>
+            </nav>
+            <div class="copyright">
+                <p>&copy; 2023 C.N.A Christian Nagor Assurances. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
