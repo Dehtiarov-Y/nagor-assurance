@@ -833,7 +833,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6, .btn, .main-header nav ul li a {
+h1, h2, h3, h4, h5, h6, .main-header nav ul li a {
     font-family: 'Poppins', sans-serif;
     font-weight: 600; /* Более четкие заголовки */
     color: var(--cna-titre-couleur);
@@ -878,11 +878,13 @@ h1, h2, h3, h4, h5, h6, .btn, .main-header nav ul li a {
 
 .btn-white {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    color: var(--cna-noir-texte);
 }
 .btn-white:hover {
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
     transform: translateY(-3px);
-    background: var(--cna-gris-clair);
+    background: var(--cna-noir-texte);
+    color: var(--cna-blanc);
 }
 
 
@@ -1048,3 +1050,11 @@ h1, h2, h3, h4, h5, h6, .btn, .main-header nav ul li a {
         height: 60px; /* Возвращаем как было */
     }
 }
+
+
+
+
+
+
+
+
