@@ -582,16 +582,26 @@ p {
 .contact-info .info-block {
     display: flex;
     align-items: flex-start;
-    gap: 20px;
-    margin-bottom: 25px;
+    gap: 25px; 
+    margin-bottom: 30px; 
 }
 
 .contact-info .info-block i {
     color: var(--cna-orange);
     font-size: 1.8em;
     margin-top: 5px;
-    width: 30px; /* Для выравнивания текста */
-    text-align: center;
+    min-width: 40px; 
+    text-align: center; 
+}
+
+.contact-info .info-block div p {
+    margin-bottom: 0;
+    line-height: 1.5;
+}
+
+.contact-info .info-block div p {
+    margin-bottom: 0;
+    line-height: 1.5;
 }
 
 .contact-info .info-block div p {
