@@ -1049,3 +1049,39 @@ h1, h2, h3, h4, h5, h6, .main-header nav ul li a {
         height: 60px; /* Возвращаем как было */
     }
 }
+
+/* --- 11. Стили для Cоциальных Иконок (Футер) --- */
+
+.footer-social {
+    margin-top: 15px; /* Немного отделим от ссылок */
+    margin-bottom: 25px; /* Отделим от копирайта */
+    display: flex;
+    justify-content: center;
+    gap: 25px; /* Расстояние между иконками */
+}
+
+.footer-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    color: var(--cna-orange); /* Иконка оранжевая */
+    border: 2px solid var(--cna-orange); /* Рамка оранжевая */
+    border-radius: 50%; /* Круглая форма */
+    font-size: 1.2em; /* Размер иконки */
+    text-decoration: none;
+    transition: all 0.3s ease-out;
+}
+
+.footer-social a:hover {
+    background-color: var(--cna-orange); /* Фон становится оранжевым */
+    color: var(--cna-blanc); /* Иконка становится белой */
+    transform: translateY(-3px); /* "Подпрыгивает" */
+    box-shadow: 0 4px 10px rgba(255, 107, 0, 0.3);
+}
+
+/* Нам не нужен кастомный курсор на иконках */
+.footer-social a {
+    cursor: pointer;
+}
