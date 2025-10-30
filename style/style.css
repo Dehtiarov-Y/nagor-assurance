@@ -789,3 +789,215 @@ p {
         height: 60px;
     }
 }
+
+/* =================================================== */
+/* ===    УЛУЧШЕНИЯ ДИЗАЙНА (ВЕРСИЯ 2.0)    === */
+/* =================================================== */
+
+/* --- 1. Новые переменные и Анимации --- */
+
+/* Плавные анимации появления */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+:root {
+    /* Обновляем цвета */
+    --cna-orange: #FF6B00;
+    --cna-noir-texte: #333333;
+    --cna-titre-couleur: #2c3e50; /* Новый, более глубокий цвет для заголовков */
+    --cna-gris-clair: #f9f9f9;  /* Еще более светлый фон для секций */
+    --cna-blanc: #FFFFFF;
+    --cna-gris-bordure: #DDDDDD;
+}
+
+/* --- 2. Типографика (Шрифты) --- */
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased; /* Более гладкие шрифты */
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6, .btn, .main-header nav ul li a {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600; /* Более четкие заголовки */
+    color: var(--cna-titre-couleur);
+    letter-spacing: -0.5px; /* Слегка сближаем буквы в заголовках */
+}
+
+.main-header nav ul li a {
+    font-weight: 500; /* Ссылки в меню чуть легче */
+    color: var(--cna-noir-texte);
+}
+
+.main-header nav ul li a:hover,
+.main-header nav ul li a.active {
+    color: var(--cna-orange);
+}
+
+
+/* --- 3. Глубина (Тени) и Переходы --- */
+
+/* Добавляем тень хедеру, чтобы он "отлип" от страницы */
+.main-header {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    border-bottom: none; /* Тень заменяет границу */
+    transition: all 0.3s ease;
+}
+
+/* Делаем кнопки "живыми" */
+.btn {
+    border-radius: 50px; /* Более современные скругленные кнопки */
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 12px rgba(255, 107, 0, 0.25);
+    transition: all 0.3s ease-out;
+}
+
+.btn:hover {
+    box-shadow: 0 6px 16px rgba(255, 107, 0, 0.4);
+    transform: translateY(-3px); /* Кнопка "подпрыгивает" */
+    background: #e06000;
+}
+
+.btn-white {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.btn-white:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px);
+    background: var(--cna-gris-clair);
+}
+
+
+/* --- 4. Анимации на Главной странице --- */
+
+.hero-section {
+    background-attachment: fixed; /* Эффект параллакса для фона */
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
+}
+
+.hero-section h1 {
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.hero-section h2 {
+    animation: fadeInUp 0.8s ease-out 0.2s;
+    animation-fill-mode: backwards; /* Анимация ждет, пока начнется */
+}
+
+.hero-section .lead {
+    animation: fadeInUp 0.8s ease-out 0.4s;
+    animation-fill-mode: backwards;
+}
+
+.hero-section .btn {
+    animation: fadeInUp 0.8s ease-out 0.6s;
+    animation-fill-mode: backwards;
+}
+
+/* --- 5. Улучшенные Карточки --- */
+
+.clients-grid {
+    animation: fadeInUp 0.8s ease-out 0.5s;
+    animation-fill-mode: backwards;
+}
+
+.client-card {
+    background: var(--cna-blanc); /* Чистый белый фон */
+    border: 1px solid #EDEDED;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03); /* Очень легкая тень */
+    padding: 30px 25px;
+    transition: all 0.3s ease-out;
+}
+
+.client-card:hover {
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08); /* Тень усиливается */
+    border-color: var(--cna-orange);
+    transform: translateY(-5px);
+}
+
+/* Самое заметное изменение: стилизуем иконки */
+.client-card i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8em;
+    width: 60px;
+    height: 60px;
+    background-color: var(--cna-orange);
+    color: var(--cna-blanc);
+    border-radius: 50%; /* Круглый фон */
+    margin: 0 auto 20px auto; /* Центрируем */
+    transition: all 0.3s ease;
+}
+
+.client-card:hover i {
+    transform: scale(1.1) rotate(5deg); /* Иконка слегка поворачивается */
+}
+
+.client-card h3 {
+    font-size: 1.4em;
+    color: var(--cna-titre-couleur); /* Используем новый цвет заголовка */
+}
+
+/* Улучшаем карточки партнеров */
+.partner-card {
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    border: 1px solid #EDEDED;
+    transition: all 0.3s ease-out;
+}
+
+.partner-card:hover {
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    transform: translateY(-5px);
+}
+
+/* --- 6. Улучшенные Формы --- */
+.contact-form {
+    background: var(--cna-blanc);
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+}
+
+.form-group input,
+.form-group textarea {
+    border-radius: 8px; /* Более скругленные поля */
+    padding: 14px;
+    background: #f9f9f9;
+    border: 1px solid #EAEAEA;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--cna-orange);
+    background: var(--cna-blanc);
+    box-shadow: 0 0 10px rgba(255, 107, 0, 0.2);
+}
+
+/* --- 7. Адаптация Бургер-меню --- */
+@media (max-width: 900px) {
+    .nav-wrapper {
+        background: rgba(255, 255, 255, 0.95); /* Чуть менее прозрачный фон */
+    }
+
+    .main-header nav ul li a {
+        color: var(--cna-titre-couleur); /* Используем темный цвет */
+    }
+}
