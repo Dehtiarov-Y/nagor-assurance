@@ -6,6 +6,9 @@
     --cna-gris-clair: #F8F8F8;
     --cna-gris-bordure: #DDDDDD;
 }
+html {
+    scroll-behavior: smooth;
+}
 
 /* --- Réinitialisation de base --- */
 * {
@@ -999,5 +1002,49 @@ h1, h2, h3, h4, h5, h6, .btn, .main-header nav ul li a {
 
     .main-header nav ul li a {
         color: var(--cna-titre-couleur); /* Используем темный цвет */
+    }
+}
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease-out;
+}
+
+/* Этот класс будет добавляться через JavaScript,
+  когда элемент появится на экране.
+*/
+.reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* --- 9. Стилизация "Умного" хедера --- */
+
+/* Плавный переход для хедера и логотипа */
+.main-header,
+.main-header .logo img {
+    transition: all 0.3s ease-out;
+}
+
+/* Когда хедер "прилип" (получил класс .is-scrolled) */
+.main-header.is-scrolled {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background: var(--cna-blanc); /* Гарантируем белый фон */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Уменьшаем логотип, когда хедер "прилип" */
+.main-header.is-scrolled .logo img {
+    height: 45px; /* Уменьшаем с 60px до 45px */
+}
+
+/* На мобильных мы не хотим уменьшать хедер, это неудобно */
+@media (max-width: 900px) {
+    .main-header.is-scrolled {
+        padding-top: 15px; /* Возвращаем как было */
+        padding-bottom: 15px;
+    }
+    .main-header.is-scrolled .logo img {
+        height: 60px; /* Возвращаем как было */
     }
 }

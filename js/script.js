@@ -1,35 +1,9 @@
+// js/script.js
 
-document.addEventListener('DOMContentLoaded', function() {
-    const currentPath = window.location.pathname;
-    const navLinks = document.querySelectorAll('.main-header nav ul li a');
-
-    navLinks.forEach(link => {
-        // Obtenir le chemin relatif de chaque lien
-        const linkPath = link.getAttribute('href');
-
-        // Vérifier si le chemin actuel contient le chemin du lien
-        // Pour gérer "index.html" et "index" comme la même page, et les sous-pages
-        if (currentPath.includes(linkPath) || (linkPath === 'index.html' && (currentPath === '/' || currentPath === '/index.html'))) {
-            link.classList.add('active');
-        }
-    });
-});
-// --- Burger Menu Logic ---
-
+// Ждем, пока весь HTML-документ загрузится
 document.addEventListener('DOMContentLoaded', function() {
     
-    // Код для .active (который у вас уже есть)
-    const currentPath = window.location.pathname;
-    const navLinks = document.querySelectorAll('.main-header nav ul li a');
-
-    navLinks.forEach(link => {
-        const linkPath = link.getAttribute('href');
-        if (currentPath.includes(linkPath) || (linkPath === 'index.html' && (currentPath === '/' || currentPath === '/index.html'))) {
-            link.classList.add('active');
-        }
-    });
-
-    // --- Новый код для Бургера ---
+    // --- 1. Логика Бургер-меню (уже была) ---
     const hamburgerButton = document.getElementById('hamburger-button');
     const navWrapper = document.querySelector('.nav-wrapper');
 
@@ -42,13 +16,11 @@ document.addEventListener('DOMContentLoaded', function() {
             const icon = hamburgerButton.querySelector('i');
             if (navWrapper.classList.contains('is-active')) {
                 icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times'); // 'fa-times' это иконка крестика
-                // Блокируем прокрутку страницы, когда меню открыто
+                icon.classList.add('fa-times');
                 document.body.style.overflow = 'hidden';
             } else {
                 icon.classList.remove('fa-times');
                 icon.classList.add('fa-bars');
-                // Разблокируем прокрутку
                 document.body.style.overflow = '';
             }
         });
@@ -65,4 +37,55 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    // --- 2. Логика "Активной" ссылки меню (уже была) ---
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll('.main-header nav ul li a');
+
+    navLinks.forEach(link => {
+        const linkPath = link.getAttribute('href');
+        if (currentPath.endsWith(linkPath) || (linkPath === 'index.html' && (currentPath.endsWith('/') || currentPath.endsWith('/index.html')))) {
+            link.classList.add('active');
+        }
+    });
+
+    // --- 3. НОВОЕ: Анимации при прокрутке ---
+    
+    // Создаем "наблюдателя"
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            // Если элемент, за которым мы следим, появился на экране...
+            if (entry.isIntersecting) {
+                // ...добавляем ему класс, который его "покажет"
+                entry.target.classList.add('is-visible');
+                // И перестаем за ним следить, т.к. он уже показан
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.1 // Анимация сработает, когда 10% элемента видно
+    });
+
+    // Находим все элементы, которые мы пометили классом .reveal-on-scroll
+    const revealElements = document.querySelectorAll('.reveal-on-scroll');
+    // "Натравливаем" наблюдателя на каждый из них
+    revealElements.forEach(el => {
+        observer.observe(el);
+    });
+
+    
+    // --- 4. НОВОЕ: "Умный" хедер ---
+    const header = document.querySelector('.main-header');
+    if (header) {
+        window.addEventListener('scroll', () => {
+            // Если пользователь прокрутил вниз больше чем на 50 пикселей...
+            if (window.scrollY > 50) {
+                // ...добавляем класс
+                header.classList.add('is-scrolled');
+            } else {
+                // ...иначе убираем
+                header.classList.remove('is-scrolled');
+            }
+        });
+    }
 });
