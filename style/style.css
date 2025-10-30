@@ -1095,3 +1095,13 @@ h1, h2, h3, h4, h5, h6, .main-header nav ul li a {
 .footer-social a {
     cursor: pointer;
 }
+@media (max-width: 900px) {
+    .contact-info .info-block {
+        gap: 25px !important; /* Увеличиваем отступ иконки от текста */
+        margin-bottom: 30px !important; /* Увеличиваем отступ между блоками */
+    }
+
+    .contact-info .info-block i {
+        min-width: 40px !important; /* Даем иконке "дышать" */
+    }
+}
