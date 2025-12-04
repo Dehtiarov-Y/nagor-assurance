@@ -1,11 +1,12 @@
 /* --- Variables de Couleurs --- */
 :root {
-    --cna-orange: #F4710F; /* Un orange vif, basé sur le logo */
+    --cna-orange: #F4710F;
     --cna-blanc: #FFFFFF;
-    --cna-noir-texte: #333333; /* Un gris très foncé pour une bonne lisibilité */
+    --cna-noir-texte: #333333;
     --cna-gris-clair: #F8F8F8;
     --cna-gris-bordure: #DDDDDD;
 }
+
 html {
     scroll-behavior: smooth;
 }
@@ -72,7 +73,7 @@ p {
 }
 
 .btn:hover {
-    background: #e06000; /* Un orange légèrement plus foncé */
+    background: #e06000;
     text-decoration: none;
 }
 
@@ -88,7 +89,7 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* Pour la réactivité */
+    flex-wrap: wrap;
 }
 
 .main-header .logo {
@@ -97,14 +98,14 @@ p {
 }
 
 .main-header .logo img {
-    height: 60px; /* Ajustez la taille du logo si nécessaire */
+    height: 60px;
     margin-right: 10px;
 }
 
 .main-header .logo h1 {
     font-size: 1.8em;
     color: var(--cna-noir-texte);
-    margin-bottom: 0; /* Pas de marge sous le titre du logo */
+    margin-bottom: 0;
 }
 
 .main-header .logo span {
@@ -137,13 +138,14 @@ p {
 .main-header .cta-button {
     margin-left: 30px;
 }
+
 .nav-wrapper {
     display: flex;
     align-items: center;
 }
 
 .main-header .cta-button {
-    margin-left: 100px; /* Этот отступ теперь нужен здесь */
+    margin-left: 100px;
 }
 
 /* --- Main Content Styling --- */
@@ -223,7 +225,7 @@ p {
 
 /* --- Home Page Specific Styles --- */
 .hero-section {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../img/photo-assurance.png'); /* Image de fond */
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../img/photo-assurance.png');
     background-size: cover;
     background-position: center;
     color: var(--cna-blanc);
@@ -289,7 +291,7 @@ p {
     transform: translateY(-5px);
     box-shadow: 0 6px 15px rgba(0,0,0,0.1);
     text-decoration: none;
-    color: var(--cna-noir-texte); /* Garde la couleur du texte hover */
+    color: var(--cna-noir-texte);
 }
 
 .client-card i {
@@ -326,7 +328,7 @@ p {
 }
 
 .partners-logos img {
-    height: 60px; /* Taille des logos partenaires */
+    height: 60px;
     filter: grayscale(80%);
     opacity: 0.7;
     transition: filter 0.3s ease, opacity 0.3s ease;
@@ -355,8 +357,7 @@ p {
     margin-bottom: 30px;
 }
 
-
-/* Responsive Adjustments for Home Page */
+/* --- Responsive Adjustments for Home Page --- */
 @media (max-width: 768px) {
     .hero-section {
         padding: 80px 0;
@@ -374,12 +375,12 @@ p {
         height: 50px;
     }
 }
-/* --- Styles pour la Page Solutions --- */
 
+/* --- Styles pour la Page Solutions --- */
 .solution-category {
     padding: 40px 0;
-    margin-top: -80px; /* Décalage pour les ancres */
-    padding-top: 120px; /* Espace visuel pour les ancres */
+    margin-top: -80px;
+    padding-top: 120px;
 }
 
 .solution-category.bg-light {
@@ -401,8 +402,6 @@ p {
     list-style: none;
     padding-left: 10px;
     margin-top: 25px;
-    
-    /* Layout en 2 colonnes pour les listes plus longues */
     column-count: 2;
     column-gap: 30px;
 }
@@ -413,7 +412,6 @@ p {
     display: flex;
     align-items: center;
     gap: 10px;
-    /* Empêche un item de se couper entre 2 colonnes */
     break-inside: avoid; 
 }
 
@@ -423,12 +421,11 @@ p {
 }
 
 /* --- Styles pour la Page À Propos --- */
-
 .about-content {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 40px;
-    align-items: flex-start; /* Aligne en haut */
+    align-items: flex-start;
     margin-top: 40px;
 }
 
@@ -468,28 +465,26 @@ p {
 .values-list li i {
     color: var(--cna-orange);
     font-size: 1.5em;
-    width: 30px; /* Pour aligner le texte */
+    width: 30px;
     text-align: center;
 }
 
 /* --- Responsive pour Solutions et À Propos --- */
-
 @media (max-width: 900px) {
-    /* Colonne unique pour les listes de solutions */
     .solution-category ul {
         column-count: 1;
     }
     
-    /* Colonne unique pour "À Propos" */
     .about-content {
         grid-template-columns: 1fr;
     }
 
     .about-image {
-        order: -1; /* Met l'image en haut sur mobile */
+        order: -1;
         margin-bottom: 30px;
     }
 }
+
 /* --- Styles pour la Page Partenaires --- */
 .partners-grid {
     display: grid;
@@ -515,8 +510,8 @@ p {
 
 .partner-card img {
     max-width: 100%;
-    height: 80px; /* Фиксированная высота для единообразия */
-    object-fit: contain; /* Чтобы логотипы не растягивались */
+    height: 80px;
+    object-fit: contain;
     margin-bottom: 15px;
 }
 
@@ -534,7 +529,6 @@ p {
     margin-top: 40px;
 }
 
-/* Форма */
 .contact-form {
     background: var(--cna-gris-clair);
     padding: 30px;
@@ -578,7 +572,6 @@ p {
     font-size: 1.1em;
 }
 
-/* Инфо */
 .contact-info .info-block {
     display: flex;
     align-items: flex-start;
@@ -592,16 +585,6 @@ p {
     margin-top: 5px;
     min-width: 40px; 
     text-align: center; 
-}
-
-.contact-info .info-block div p {
-    margin-bottom: 0;
-    line-height: 1.5;
-}
-
-.contact-info .info-block div p {
-    margin-bottom: 0;
-    line-height: 1.5;
 }
 
 .contact-info .info-block div p {
@@ -625,7 +608,7 @@ p {
 
 /* --- Styles pour la Page Mentions Légales --- */
 .legal-content {
-    max-width: 800px; /* Делает юридический текст легче для чтения */
+    max-width: 800px;
     margin: 0 auto;
 }
 
@@ -641,7 +624,7 @@ p {
     margin-bottom: 10px;
 }
 
-/* --- Responsive для Страниц Контактов/Партнеров --- */
+/* --- Responsive pour les Pages Contact/Partenaires --- */
 @media (max-width: 900px) {
     .contact-layout {
         grid-template-columns: 1fr;
@@ -658,63 +641,56 @@ p {
         height: 60px;
     }
 }
+
 /* --- Hamburger Menu Icon --- */
 .hamburger {
-    display: none; /* Скрыт по умолчанию на десктопе */
+    display: none;
     background: none;
     border: none;
     cursor: pointer;
     font-size: 1.8rem;
     color: var(--cna-orange);
     padding: 10px;
-    z-index: 1001; /* Выше чем логотип, но ниже меню */
+    z-index: 1001;
 }
 
 /* --- Responsive Design (Burger Menu Logic) --- */
-/* Мы используем 900px как точку перелома, чтобы меню не ломалось на планшетах */
 @media (max-width: 900px) {
     
-    /* 1. Показываем бургер, меняем layout хедера */
     .hamburger {
-        display: block; /* Показываем иконку */
+        display: block;
     }
 
     .main-header .container {
-        justify-content: space-between; /* Лого слева, бургер справа */
+        justify-content: space-between;
         align-items: center;
-        flex-wrap: nowrap; /* Запрещаем перенос */
+        flex-wrap: nowrap;
     }
 
-    /* 2. Скрываем десктопную навигацию */
     .nav-wrapper {
-        display: none; /* Скрываем по умолчанию */
-        
-        /* Стилизация мобильного меню (когда оно откроется) */
-        position: fixed; /* На весь экран */
+        display: none;
+        position: fixed;
         top: 0;
         left: 0;
         width: 100%;
-        height: 100vh; /* 100% высоты экрана */
-        background: rgba(255, 255, 255, 0.98); /* Белый фон с легкой прозрачностью */
-        backdrop-filter: blur(5px); /* Эффект размытия */
-        
+        height: 100vh;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(5px);
         flex-direction: column;
-        justify-content: center; /* Центрируем по вертикали */
-        align-items: center; /* Центрируем по горизонтали */
+        justify-content: center;
+        align-items: center;
         z-index: 1000;
         padding: 20px;
     }
     
-    /* 3. Класс .is-active (добавляется через JS) */
     .nav-wrapper.is-active {
-        display: flex; /* Показываем меню */
+        display: flex;
     }
 
-    /* 4. Стилизация ссылок в мобильном меню */
     .main-header nav ul {
         flex-direction: column;
         text-align: center;
-        margin-bottom: 30px; /* Отступ от кнопки */
+        margin-bottom: 30px;
     }
 
     .main-header nav ul li {
@@ -722,7 +698,7 @@ p {
     }
 
     .main-header nav ul li a {
-        font-size: 2em; /* Крупные ссылки */
+        font-size: 2em;
         color: var(--cna-noir-texte);
     }
     
@@ -731,7 +707,6 @@ p {
         color: var(--cna-orange);
     }
 
-    /* 5. Кнопка CTA в мобильном меню */
     .main-header .cta-button {
         margin-left: 0;
         width: 100%;
@@ -744,8 +719,6 @@ p {
         padding: 15px;
     }
 
-    /* --- Остальная адаптация (скопировано из старого CSS) --- */
-    
     .main-footer .footer-nav ul {
         flex-direction: column;
     }
@@ -774,7 +747,6 @@ p {
         height: 50px;
     }
 
-    /* Адаптация для Solutions и À Propos */
     .solution-category ul {
         column-count: 1;
     }
@@ -784,11 +756,10 @@ p {
     }
 
     .about-image {
-        order: -1; /* Ставим картинку над текстом */
+        order: -1;
         margin-bottom: 30px;
     }
     
-    /* Адаптация для Контактов и Партнеров */
     .contact-layout {
         grid-template-columns: 1fr;
     }
@@ -804,12 +775,10 @@ p {
 }
 
 /* =================================================== */
-/* ===    УЛУЧШЕНИЯ ДИЗАЙНА (ВЕРСИЯ 2.0)    === */
+/* ===    AMÉLIORATIONS DU DESIGN (VERSION 2.0)    === */
 /* =================================================== */
 
-/* --- 1. Новые переменные и Анимации --- */
-
-/* Плавные анимации появления */
+/* --- 1. Nouvelles Variables et Animations --- */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -826,31 +795,30 @@ p {
 }
 
 :root {
-    /* Обновляем цвета */
     --cna-orange: #FF6B00;
     --cna-noir-texte: #333333;
-    --cna-gris-clair: #f9f9f9;  /* Еще более светлый фон для секций */
+    --cna-gris-clair: #f9f9f9;
     --cna-blanc: #FFFFFF;
     --cna-gris-bordure: #DDDDDD;
 }
 
-/* --- 2. Типографика (Шрифты) --- */
+/* --- 2. Typographie (Polices) --- */
 body {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
-    -webkit-font-smoothing: antialiased; /* Более гладкие шрифты */
+    -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, h4, h5, h6, .main-header nav ul li a {
     font-family: 'Poppins', sans-serif;
-    font-weight: 600; /* Более четкие заголовки */
+    font-weight: 600;
     color: var(--cna-titre-couleur);
-    letter-spacing: -0.5px; /* Слегка сближаем буквы в заголовках */
+    letter-spacing: -0.5px;
 }
 
 .main-header nav ul li a {
-    font-weight: 500; /* Ссылки в меню чуть легче */
+    font-weight: 500;
     color: var(--cna-noir-texte);
 }
 
@@ -859,19 +827,15 @@ h1, h2, h3, h4, h5, h6, .main-header nav ul li a {
     color: var(--cna-orange);
 }
 
-
-/* --- 3. Глубина (Тени) и Переходы --- */
-
-/* Добавляем тень хедеру, чтобы он "отлип" от страницы */
+/* --- 3. Profondeur (Ombres) et Transitions --- */
 .main-header {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    border-bottom: none; /* Тень заменяет границу */
+    border-bottom: none;
     transition: all 0.3s ease;
 }
 
-/* Делаем кнопки "живыми" */
 .btn {
-    border-radius: 50px; /* Более современные скругленные кнопки */
+    border-radius: 50px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -881,7 +845,7 @@ h1, h2, h3, h4, h5, h6, .main-header nav ul li a {
 
 .btn:hover {
     box-shadow: 0 6px 16px rgba(255, 107, 0, 0.4);
-    transform: translateY(-3px); /* Кнопка "подпрыгивает" */
+    transform: translateY(-3px);
     background: #e06000;
 }
 
@@ -896,11 +860,9 @@ h1, h2, h3, h4, h5, h6, .main-header nav ul li a {
     color: var(--cna-blanc);
 }
 
-
-/* --- 4. Анимации на Главной странице --- */
-
+/* --- 4. Animations sur la Page d'Accueil --- */
 .hero-section {
-    background-attachment: fixed; /* Эффект параллакса для фона */
+    background-attachment: fixed;
     text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
 }
 
@@ -910,7 +872,7 @@ h1, h2, h3, h4, h5, h6, .main-header nav ul li a {
 
 .hero-section h2 {
     animation: fadeInUp 0.8s ease-out 0.2s;
-    animation-fill-mode: backwards; /* Анимация ждет, пока начнется */
+    animation-fill-mode: backwards;
 }
 
 .hero-section .lead {
@@ -923,29 +885,27 @@ h1, h2, h3, h4, h5, h6, .main-header nav ul li a {
     animation-fill-mode: backwards;
 }
 
-/* --- 5. Улучшенные Карточки --- */
-
+/* --- 5. Cartes Améliorées --- */
 .clients-grid {
     animation: fadeInUp 0.8s ease-out 0.5s;
     animation-fill-mode: backwards;
 }
 
 .client-card {
-    background: var(--cna-blanc); /* Чистый белый фон */
+    background: var(--cna-blanc);
     border: 1px solid #EDEDED;
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.03); /* Очень легкая тень */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
     padding: 30px 25px;
     transition: all 0.3s ease-out;
 }
 
 .client-card:hover {
-    box-shadow: 0 8px 25px rgba(0,0,0,0.08); /* Тень усиливается */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
     border-color: var(--cna-orange);
     transform: translateY(-5px);
 }
 
-/* Самое заметное изменение: стилизуем иконки */
 .client-card i {
     display: flex;
     align-items: center;
@@ -955,21 +915,20 @@ h1, h2, h3, h4, h5, h6, .main-header nav ul li a {
     height: 60px;
     background-color: var(--cna-orange);
     color: var(--cna-blanc);
-    border-radius: 50%; /* Круглый фон */
-    margin: 0 auto 20px auto; /* Центрируем */
+    border-radius: 50%;
+    margin: 0 auto 20px auto;
     transition: all 0.3s ease;
 }
 
 .client-card:hover i {
-    transform: scale(1.1) rotate(5deg); /* Иконка слегка поворачивается */
+    transform: scale(1.1) rotate(5deg);
 }
 
 .client-card h3 {
     font-size: 1.4em;
-    color: var(--cna-titre-couleur); /* Используем новый цвет заголовка */
+    color: var(--cna-titre-couleur);
 }
 
-/* Улучшаем карточки партнеров */
 .partner-card {
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.03);
@@ -982,7 +941,7 @@ h1, h2, h3, h4, h5, h6, .main-header nav ul li a {
     transform: translateY(-5px);
 }
 
-/* --- 6. Улучшенные Формы --- */
+/* --- 6. Formulaires Améliorés --- */
 .contact-form {
     background: var(--cna-blanc);
     border-radius: 12px;
@@ -991,7 +950,7 @@ h1, h2, h3, h4, h5, h6, .main-header nav ul li a {
 
 .form-group input,
 .form-group textarea {
-    border-radius: 8px; /* Более скругленные поля */
+    border-radius: 8px;
     padding: 14px;
     background: #f9f9f9;
     border: 1px solid #EAEAEA;
@@ -1005,69 +964,62 @@ h1, h2, h3, h4, h5, h6, .main-header nav ul li a {
     box-shadow: 0 0 10px rgba(255, 107, 0, 0.2);
 }
 
-/* --- 7. Адаптация Бургер-меню --- */
+/* --- 7. Adaptation du Menu Burger --- */
 @media (max-width: 900px) {
     .nav-wrapper {
-        background: rgba(255, 255, 255, 0.95); /* Чуть менее прозрачный фон */
+        background: rgba(255, 255, 255, 0.95);
     }
 
     .main-header nav ul li a {
-        color: var(--cna-titre-couleur); /* Используем темный цвет */
+        color: var(--cna-titre-couleur);
     }
 }
+
 .reveal-on-scroll {
     opacity: 0;
     transform: translateY(30px);
     transition: all 1s ease-out;
 }
 
-/* Этот класс будет добавляться через JavaScript,
-  когда элемент появится на экране.
-*/
 .reveal-on-scroll.is-visible {
     opacity: 1;
     transform: translateY(0);
 }
-/* --- 9. Стилизация "Умного" хедера --- */
 
-/* Плавный переход для хедера и логотипа */
+/* --- 9. Stylisation du Header Intelligent --- */
 .main-header,
 .main-header .logo img {
     transition: all 0.3s ease-out;
 }
 
-/* Когда хедер "прилип" (получил класс .is-scrolled) */
 .main-header.is-scrolled {
     padding-top: 5px;
     padding-bottom: 5px;
-    background: var(--cna-blanc); /* Гарантируем белый фон */
+    background: var(--cna-blanc);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Уменьшаем логотип, когда хедер "прилип" */
 .main-header.is-scrolled .logo img {
-    height: 45px; /* Уменьшаем с 60px до 45px */
+    height: 45px;
 }
 
-/* На мобильных мы не хотим уменьшать хедер, это неудобно */
 @media (max-width: 900px) {
     .main-header.is-scrolled {
-        padding-top: 15px; /* Возвращаем как было */
+        padding-top: 15px;
         padding-bottom: 15px;
     }
     .main-header.is-scrolled .logo img {
-        height: 60px; /* Возвращаем как было */
+        height: 60px;
     }
 }
 
-/* --- 11. Стили для Cоциальных Иконок (Футер) --- */
-
+/* --- 11. Styles pour les Icônes Sociales (Footer) --- */
 .footer-social {
-    margin-top: 15px; /* Немного отделим от ссылок */
-    margin-bottom: 25px; /* Отделим от копирайта */
+    margin-top: 15px;
+    margin-bottom: 25px;
     display: flex;
     justify-content: center;
-    gap: 25px; /* Расстояние между иконками */
+    gap: 25px;
 }
 
 .footer-social a {
@@ -1076,32 +1028,32 @@ h1, h2, h3, h4, h5, h6, .main-header nav ul li a {
     justify-content: center;
     width: 45px;
     height: 45px;
-    color: var(--cna-orange); /* Иконка оранжевая */
-    border: 2px solid var(--cna-orange); /* Рамка оранжевая */
-    border-radius: 50%; /* Круглая форма */
-    font-size: 1.2em; /* Размер иконки */
+    color: var(--cna-orange);
+    border: 2px solid var(--cna-orange);
+    border-radius: 50%;
+    font-size: 1.2em;
     text-decoration: none;
     transition: all 0.3s ease-out;
 }
 
 .footer-social a:hover {
-    background-color: var(--cna-orange); /* Фон становится оранжевым */
-    color: var(--cna-blanc); /* Иконка становится белой */
-    transform: translateY(-3px); /* "Подпрыгивает" */
+    background-color: var(--cna-orange);
+    color: var(--cna-blanc);
+    transform: translateY(-3px);
     box-shadow: 0 4px 10px rgba(255, 107, 0, 0.3);
 }
 
-/* Нам не нужен кастомный курсор на иконках */
 .footer-social a {
     cursor: pointer;
 }
+
 @media (max-width: 900px) {
     .contact-info .info-block {
-        gap: 25px !important; /* Увеличиваем отступ иконки от текста */
-        margin-bottom: 30px !important; /* Увеличиваем отступ между блоками */
+        gap: 25px !important;
+        margin-bottom: 30px !important;
     }
 
     .contact-info .info-block i {
-        min-width: 40px !important; /* Даем иконке "дышать" */
+        min-width: 40px !important;
     }
 }
