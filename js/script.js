@@ -1,5 +1,3 @@
-// js/script.js
-
 document.addEventListener('DOMContentLoaded', function() {
     
     // --- 1. Логика Бургер-меню ---
